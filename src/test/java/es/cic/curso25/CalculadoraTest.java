@@ -5,8 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
+
     @Test
     public void testSumar() {
+        
         // Preparo
         Calculadora cut = new Calculadora();
 
@@ -27,6 +29,7 @@ public class CalculadoraTest {
 
     @Test
     public void testRestar() {
+
         // Preparo
         Calculadora cut = new Calculadora();
 
@@ -37,6 +40,36 @@ public class CalculadoraTest {
         // Verifico
         double valorActual = cut.getTotal();
         assertEquals(-5.6, valorActual);
+    }
+
+    @Test
+    public void testMultiplcar() {
+
+        // Preparo
+        Calculadora cut = new Calculadora();
+
+
+        // Ejecuto
+        cut.multiplicar(5.6);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+    }
+
+    @Test
+    public void testDividir() {
+
+        // Preparo
+        Calculadora cut = new Calculadora();
+
+
+        // Ejecuto
+        cut.dividir(5.6);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
     }
     
 }
