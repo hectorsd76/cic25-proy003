@@ -3,7 +3,7 @@ package es.cic.curso25;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
-import org.junit.jupiter.api.Disabled;
+// import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
@@ -73,7 +73,7 @@ public class CalculadoraTest {
         double valorActual = cut.getTotal();
         assertEquals(0, valorActual);
     }
-    
+
     // @Disabled
     @Test
     public void testDividirPorCero() {
