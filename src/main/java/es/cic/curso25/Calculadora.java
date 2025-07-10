@@ -23,8 +23,12 @@ public class Calculadora  {
         if(valor == 0){
             throw new ArithmeticException("División por cero");
         }else{
-            total = total % valor;
+            total = total / valor;
         }
 
+    }
+
+    public void limpiar(){
+        total = 0;
     }
 }

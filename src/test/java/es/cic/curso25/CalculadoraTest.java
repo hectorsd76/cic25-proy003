@@ -71,7 +71,7 @@ public class CalculadoraTest {
 
         // Verifico
         double valorActual = cut.getTotal();
-        assertEquals(0, valorActual);
+        assertEquals(1, valorActual);
     }
 
     // @Disabled
@@ -85,6 +85,21 @@ public class CalculadoraTest {
         // Ejecuto
         assertThrowsExactly(ArithmeticException.class,() -> cut.dividir(0));
   
+    }
+
+    @Test
+    void testLimpiar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        cut.sumar(2);
+
+        //Ejcutar
+        cut.limpiar();
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual);
+
     }
     
 }
